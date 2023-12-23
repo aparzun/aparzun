@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paper wala</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* CSS for Navigation Bar */
+    body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 1rem;
+    }
+    
+    nav ul li a:hover {
+        background-color: white;
+        color: #333;
+    }
+    
+    
+    
+    /* CSS for Main Section */
+    main {
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    section {
+        width: 50%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    
+    section h2 {
+        margin-top: 0;
+    }
+    
+    /* CSS for Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}   
+.open-button {
+  background-color: #000;
+  color: #2CBC39;
+  padding: 16px 20px;
+  border: green;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 210px;
+  right: 352px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 200px;
+  padding: 100px;
+  background-color: #1A1C1A;
+  
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    
+    </style>
+</head>
+<body>
+    <nav>
+        
+       <p><a href="file:///C:/Users/hi/Desktop/test/index.html">
+<img src="https://i.ibb.co/Rg4nb2m/logo.png" alt="PaperWala.com"  height="80">
+</a></p>
+            <ul>
+            <li><a href="file:///C:/Users/hi/Desktop/test/home.html">Home</a></li>
+            <li><a href="file:///C:/Users/hi/Desktop/test/about.html">About</a></li>
+            <li><a href="file:///C:/Users/hi/Desktop/test/services.html">Services</a></li>
+            <li><a href="file:///C:/Users/hi/Desktop/test/contacts.html">Contact<br></a></li>
+            
+        </ul>
+    </nav>
+        <main>
+        <section>
+            <h2>About Us<hr></h2>
+            <p><b>Paper Wala is a business that focuses on recycling paper,plastic and metalic items  giving back to the community. The business accepts all kinds of paper,metalic and plastic materials,
+ including newspapers, magazines,tins ,rods ,buckets ,bottles and cardboard, and they recycle the papers by giving it to factories that will recycle the paper,metal and plastic and make new products out of it.
+ What makes Paper Wala stand out is its unique program that gives the customer 50% of the money we earn from the paper,metals and plastic they gave for recycling. 
+For every kg of paper,metal and plastic that a customer recycles, they earn a certain amount of money that can be redeemed for cash or used towards future purchases.
+ This not only encourages customers to recycle more but also helps the business to reduce waste and promote sustainability. In addition to providing a valuable
+ service to the community,Paper Wala is fully eco-friendly.
+ Paper Wala is commited to make tommorow a better and greener day.</b>
+<br></p>
+        </section>
+        <section>
+            <h2>Our Services<hr></h2>
+            <ul>
+                <li>To recycle any Paper item</li>
+                <li>To recycle any Plastic item</li>
+                <li>To recycle any metalic item</li>
+                <li>To plant more Trees(coming soon)</li>
+            </ul>
+             </section>
+             <h1>Pricing<hr></h1> 
+             <ul>
+               <li>paper materials,original price:<strike>20rs/kg</strike> our price:30rs/kg</li>
+              <li>metal materials,original price:<strike>100rs/kg</strike> our price:200rs/kg</li>
+              <li>plastic materials,original price<strike>50rs/kg</strike> our price:70rs/kg </li>
+            
+
+             </ul>
+    
+    </main>
+    <button class="open-button" onclick="openForm()">Book Now</button>
+
+<div class="form-popup" id="myForm">
+  
+  <form action="https://script.google.com/macros/s/AKfycby6obVNahOR7-F-1pFO7JhiRta9ND-z7B_yGhL_7kbAxlPZyIQMHvYNfH2qNy_Y0fUE/exec" method="POST"class="form-container">
+    
+    <h1><font Color="#2CBC39"><u>Book Now</u></h1>
+
+
+
+    <label for="email"><b>Email:</b></label><font Color="#2CBC39">  
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+<label for="number"><b>Phone Number:</b></label><font Color="#2CBC39"> 
+    <input type="text" placeholder="Enter Number" id="number" name=" number" required>
+
+
+
+
+
+<label for="service"><b>Service:</b></label><font Color="#2CBC39"> 
+  <select name="service" id="service">
+    <option value="plant trees">plant trees(coming soon)</option>
+    <option value="plastic">plastic materials</option>
+    <option value="metal">metal materials</option>
+    <option value="paper">paper materials</option>
+    <option value="others">others</option>
+  </select>
+  <br><br>
+
+
+
+
+    <label for="address"><b>Address</b></label><font Color="#2CBC39">
+    <input type="text" placeholder="Enter Address" name="address" required >
+
+    <button type="submit" class="btn"><b>Book</b></button>
+    <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+  </form>
+
+
+
+
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+    <script>
+        function getPath(){
+            var path = window.location.hostname
+            alert(path);
+        }
+    </script>
+
+ <footer>
+        &copy; 2023 Paper Wala. All rights reserved.
+    </footer>  
+</body>
+</html>

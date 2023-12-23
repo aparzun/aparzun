@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>paper wala</title>
+	<style>
+    /* CSS for Navigation Bar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 1rem;
+    }
+    
+    nav ul li a:hover {
+        background-color: white;
+        color: #333;
+    }
+    
+    /* CSS for Header */
+    header {
+        background-image: url('header-image.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    header h1 {
+        font-size: 5rem;
+    }
+    
+    /* CSS for Main Section */
+    main {
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    section {
+        width: 50%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    
+    section h2 {
+        margin-top: 0;
+    }
+    
+    /* CSS for Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #FF5733;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+    
+    </style>
+</head>
+<body>
+	<nav>
+		<p><a href="file:///C:/Users/hi/Desktop/test/index.html">
+<img src="https://i.ibb.co/Rg4nb2m/logo.png" alt="PaperWala.com"  height="80">
+</a></p>
+<ul>
+            <li><a href="file:///C:/Users/hi/Desktop/test/home.html">Home</a></li>
+            <li><a href="file:///C:/Users/hi/Desktop/test/about.html">About</a></li>
+            <li><a href="file:///C:/Users/hi/Desktop/test/services.html">Services</a></li>
+            <li><a href="file:///C:/Users/hi/Desktop/test/contacts.html">Contact<br></a></li>
+        </ul>
+    </nav>
+    <h1><b>About Us<hr></b></h1>
+	<p>Paper Wala is NGO which is founded by two co-founders,Rasmit Kumar Parida and Aarzunn Parida.<br>
+    It was make the environment better by recycling wastes,we also reward the customer<br>
+for giving us the wastes after we take the waste we directly give it the factories that<br>
+pay us for the wastes this money,is later funded in UNICEF and other NGOs.We keep the<br>
+track of how much waste did the customer give ,and give bonus reward for it.We want to make<br>
+tommorow's day a better and a greener day.</p>
+
+<img id="myImg1" src="https://i.ibb.co/7VDPgJr/plasticman.png" alt="say no to plastic" style="width:60%;max-width:300px" onclick="imgClicked(this);">
+<img id="myImg2" src="https://i.ibb.co/4dQ38Tj/metalman.jpg" alt="we recycle metal cans" height="200" onclick="imgClicked(this);">
+<img id="myImg3" src="https://i.ibb.co/Z8Cpvkh/holaman.png" alt="we even recycle plastic bottles" style="width:100%;max-width:300px" onclick="imgClicked(this);">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" onClick='closeModal();'>&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+function imgClicked(obj){
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  modal.style.display = "block";
+  modalImg.src = obj.src;
+  captionText.innerHTML = obj.alt;
+}
+
+function closeModal(){
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
